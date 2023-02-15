@@ -4,7 +4,6 @@ const messages = require("../helper/message.json");
 const User = require("../models/users");
 
 // User Register
-
 module.exports.registerUser = async (req, res) => {
   try {
     let user = await User.findOne({ email: req.body.email });
@@ -84,7 +83,6 @@ module.exports.registerUser = async (req, res) => {
 };
 
 // User Login
-
 module.exports.loginUser = async (req, res) => {
   try {
     const { email, password } = req.body;
